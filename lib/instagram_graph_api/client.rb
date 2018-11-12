@@ -7,6 +7,7 @@ module InstagramGraphApi
     include InstagramGraphApi::Client::Users
     include InstagramGraphApi::Client::Media
     include InstagramGraphApi::Client::Discovery
+    include InstagramGraphApi::Client::Comments
 
     def initialize(media_id = nil, access_token)
       super(access_token)
