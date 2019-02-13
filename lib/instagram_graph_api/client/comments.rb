@@ -9,6 +9,10 @@ module InstagramGraphApi
       def get_comment(comment_id, fields = "hidden,id,like_count,media,text,timestamp,user,username,replies")
         get_object(comment_id, fields: fields)
       end
+                                          
+      def get_reply(reply_id, fields = "hidden,like_count,media,text,timestamp,username,id,user")
+        get_object(reply_id, fields: fields)
+      end      
 
       def get_replies(comment_id)
         query = "replies"
