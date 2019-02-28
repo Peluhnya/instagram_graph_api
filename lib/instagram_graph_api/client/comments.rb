@@ -19,6 +19,11 @@ module InstagramGraphApi
         get_connections(comment_id, query)
       end
 
+      def send_reply(comment_id, reply_text)
+        query = "/replies?message=#{reply_text}"
+        put_connections(comment_id, query)
+      end
+
       def hide_comment(comment_id)
         query = "?hide=true"
         put_connections(comment_id, query)
